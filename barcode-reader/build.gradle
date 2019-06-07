@@ -12,12 +12,12 @@ ext {
 
     libraryDescription = 'BarcodeReader on Android'
 
-    siteUrl = 'https://gitlab.com/app-devper'
+    siteUrl = 'https://gitlab.com/app-devper/barcode-reader'
     gitUrl = 'https://gitlab.com/app-devper/barcode-reader.git'
 
     libraryVersion = '1.0.0'
 
-    developerId = 'https://appdevper.bintray.com'
+    developerId = 'worawit'
     developerName = 'Worawit Boonsorn'
     developerEmail = 'worawit.bs@gmail.com'
 
@@ -136,9 +136,6 @@ bintray {
         vcsUrl = gitUrl
         licenses = allLicenses
         publish = true
-        publicDownloadNumbers = true
-        version {
-            desc = libraryDescription
-        }
+
     }
 }

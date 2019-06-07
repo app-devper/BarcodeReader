@@ -2,11 +2,6 @@ Barcode Reader - Google Mobile Vision
 ===================
 Android Barcode Reader library using **Google Mobile Vision.** This library is built on top of google mobile vision sample adding improvements and fixing few bugs.
 
-[ ![Download](https://api.bintray.com/packages/androidhive-info/maven/barcode-reader/images/download.svg) ](https://bintray.com/androidhive-info/maven/barcode-reader/_latestVersion)
-[![Example](https://img.shields.io/badge/Example-Movie%20Tickets-green.svg)](https://www.androidhive.info/2017/07/android-implementing-preferences-settings-screen/)
-
-![Demo](https://user-images.githubusercontent.com/497670/29021175-41e613c4-7b82-11e7-8887-a6d8186aeca3.gif)
-
 How to Use
 -------------
 1. Include the barcode reader dependency in app's **build.gradle**
@@ -98,16 +93,6 @@ To use it, add the <code>info.androidhive.barcode.ScannerOverlay</code> on top o
         app:auto_focus="true"
         app:use_flash="false" />
 
-    <info.androidhive.barcode.ScannerOverlay
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#44000000"
-        app:line_color="#7323DC"
-        app:line_speed="6"
-        app:line_width="4"
-        app:square_height="200"
-        app:square_width="200"/>
-
 </RelativeLayout>
 
 ```
@@ -120,17 +105,6 @@ XML attribute for **Barcode Reader**
 <code>auto_focus</code> - boolean, turn on/off auto focus. Default is <code>true</code>
 
 <code>use_flash</code> - boolean, turn on/off flash. Default is <code>false</code>
-
-
-XML attribute for **Scanner Overlay** Indicator
-
-<code>square_width</code> - Width of transparent square
-
-<code>square_height</code> - Height of transparent square
-
-<code>line_color</code> - Horizontal line color
-
-<code>line_speed</code> - Horizontal line animation speed
 
 ----
 
