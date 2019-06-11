@@ -9,7 +9,7 @@ ext {
     libraryName = 'BarcodeReader'
     artifact = 'barcode-reader'
 
-    libraryDescription = 'BarcodeReader on Android'
+    libraryDescription = 'Android BarcodeReader Library'
 
     siteUrl = 'https://gitlab.com/app-devper/barcode-reader'
     gitUrl = 'https://gitlab.com/app-devper/barcode-reader.git'
