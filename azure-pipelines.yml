@@ -10,11 +10,29 @@ pool:
   vmImage: 'macos-latest'
 
 steps:
+- bash: echo This is a script that could use $BINTRAY-USER
+  env:
+    BINTRAY-USER: $(bintray-user)
+    BINTRAY-APIKEY: $(bintray-apikey)
+
 - task: Gradle@2
   inputs:
     workingDirectory: ''
     gradleWrapperFile: 'gradlew'
+    options: '-Pbintray-user=$(bintray-user) -Pbintray-apikey=$(bintray-apikey)'
     gradleOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
-    tasks: 'assembleDebug'
+    tasks: 'clean build bintrayUpload'
+
+- task: CopyFiles@2
+  inputs:
+    contents: '**/*.aar'
+    targetFolder: '$(build.artifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(build.artifactStagingDirectory)'
+    artifactName: 'aars'
+    artifactType: 'container'
