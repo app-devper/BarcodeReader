@@ -1,4 +1,3 @@
-[ ![Download](https://api.bintray.com/packages/appdevper/maven/barcode-reader/images/download.svg) ](https://bintray.com/appdevper/maven/barcode-reader/_latestVersion)
 
 Barcode Reader - Google Mobile Vision
 ===================
